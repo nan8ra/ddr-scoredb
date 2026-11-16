@@ -1,0 +1,18 @@
+[
+ {"id":"demo-01","title":"DEMO 01","sortKey":"01","jacketUrl":null,"charts":[{"difficulty":"expert","level":16},{"difficulty":"challenge","level":17}]},
+ {"id":"demo-02","title":"DEMO 02","sortKey":"02","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-03","title":"DEMO 03","sortKey":"03","jacketUrl":null,"charts":[{"difficulty":"challenge","level":16}]},
+ {"id":"demo-04","title":"DEMO 04","sortKey":"04","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-05","title":"DEMO 05","sortKey":"05","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-06","title":"DEMO 06","sortKey":"06","jacketUrl":null,"charts":[{"difficulty":"challenge","level":16}]},
+ {"id":"demo-07","title":"DEMO 07","sortKey":"07","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-08","title":"DEMO 08","sortKey":"08","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-09","title":"DEMO 09","sortKey":"09","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-10","title":"DEMO 10","sortKey":"10","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-11","title":"DEMO 11","sortKey":"11","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-12","title":"DEMO 12","sortKey":"12","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-13","title":"DEMO 13","sortKey":"13","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-14","title":"DEMO 14","sortKey":"14","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-15","title":"DEMO 15","sortKey":"15","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]},
+ {"id":"demo-16","title":"DEMO 16","sortKey":"16","jacketUrl":null,"charts":[{"difficulty":"expert","level":16}]}
+]
