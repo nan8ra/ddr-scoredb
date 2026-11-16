@@ -1,0 +1,684 @@
+[
+  {
+    "id": "ddr-c59f5e8ad4a135b4",
+    "title": "アイスクリームマジック",
+    "artist": "雪乃イト",
+    "sortKey": "アイスクリームマジック",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=6iqOPoP6lQi8ilD10o8ol11DQbqooOqP&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-75293dc775d88749",
+    "title": "蒼い衝動 ～for EXTREME～",
+    "artist": "NAOKI feat.YUKI",
+    "sortKey": "蒼い衝動 ～for EXTREME～",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=OboID1PloIIoOOObQdQOP110I61Ddl9I&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 9
+      },
+      {
+        "difficulty": "challenge",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-d6c731b4dd5e7899",
+    "title": "蒼が消えるとき",
+    "artist": "movies (moimoi×Xceon×Dai.)",
+    "sortKey": "蒼が消えるとき",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=6d10P0Pd1PiD1l6DPQdoPD1Q8DP0QlqQ&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-32687e2e6678da7a",
+    "title": "あおばの足音",
+    "artist": "駄菓子O型",
+    "sortKey": "あおばの足音",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=PP0P9ilQb1o160O6O6PqQIl60oDi8Db6&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-7d8656616af15049",
+    "title": "朱と碧のランページ",
+    "artist": "covered by 儒烏風亭らでん(ReGLOSS)",
+    "sortKey": "朱と碧のランページ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=8IQIld8DI9OPD00dqio1lDQ1bq6Q6P6D&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-d6427af85326503a",
+    "title": "朝色の紙飛行機",
+    "artist": "かめりあ",
+    "sortKey": "朝色の紙飛行機",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=918oPDQDoPlD1OlqlqQI08I6dD9iqoil&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-993443df53763b84",
+    "title": "アドレナリン",
+    "artist": "U1 overground",
+    "sortKey": "アドレナリン",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=111O66bbPIQb09PlIoolIOD666QqqIdP&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-521e1c63646feeb2",
+    "title": "天ノ弱",
+    "artist": "164",
+    "sortKey": "天ノ弱",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=16bl8D8lOddP9Obq0OIlOI6q8Pi1l9O0&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-70efea596a95f5f8",
+    "title": "妖隠し -あやかしかくし-",
+    "artist": "DJ TOTTO feat.3L",
+    "sortKey": "妖隠し -あやかしかくし-",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=06O0ObdQobq86lPDo6P18dQ1QPdilIQO&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-cd83b6d0ea50141e",
+    "title": "アユミ☆マジカルショータイム",
+    "artist": "キノシタ feat.音街ウナ",
+    "sortKey": "アユミ☆マジカルショータイム",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=PDoiQoi9q08PQ96Pl6oD9IIi6iq0Q6D6&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-eebf26fc17f563fb",
+    "title": "アリスサイド・キャスリング",
+    "artist": "メリー・バッド・メルヘン",
+    "sortKey": "アリスサイド・キャスリング",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=D6IIDqlO8idioiPo8l61Ob11D6Di0DiQ&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 10
+      }
+    ]
+  },
+  {
+    "id": "ddr-dc96f1ff3f500c32",
+    "title": "アルストロメリア (walk with you remix)",
+    "artist": "TAG",
+    "sortKey": "アルストロメリア (walk with you remix)",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=8bQQ0lP96186D8Ibo8IoOd6o16qioiIo&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      },
+      {
+        "difficulty": "challenge",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-ae4f288d93c1b376",
+    "title": "阿波おどり -Awaodori- やっぱり踊りはやめられない",
+    "artist": "U1 ミライダガッキ連と矢印連",
+    "sortKey": "阿波おどり -Awaodori- やっぱり踊りはやめられない",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=1d9lDIl6iiiD0D0d8qd6dlDlq6P8o0QI&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-5297377e126e0b21",
+    "title": "いーあるふぁんくらぶ",
+    "artist": "みきとP",
+    "sortKey": "いーあるふぁんくらぶ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=Oq900IIl1Ob8qoIPqDP0PD6blbqIqlP1&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-e97b72d2e6387a51",
+    "title": "イーディーエム・ジャンパーズ",
+    "artist": "かめりあ feat. ななひら",
+    "sortKey": "イーディーエム・ジャンパーズ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=61oIP0QIlO90d18ObDP1Dii6PoIQoOD8&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-cd916bf0e48f5c37",
+    "title": "イガク",
+    "artist": "原口沙輔 feat.重音テト",
+    "sortKey": "イガク",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=oQIO6Il1IboPPDb6oDql61oIob9l619q&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-72235a8328a67469",
+    "title": "怒れる大きな白い馬",
+    "artist": "Morning Blue Dragon",
+    "sortKey": "怒れる大きな白い馬",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=ibI0QllidqQ089ql8dob6bIoodbbIoqq&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": "ddr-09650803327890bf",
+    "title": "鋳鉄の檻",
+    "artist": "小寺可南子,ランコ,SARAH by BEMANI Sound Team \"Yvya\"",
+    "sortKey": "鋳鉄の檻",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=Odb0b0ld6P80b8b6QD0IIO866iq8OQ0b&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-ac865356b81b9732",
+    "title": "イノセントバイブル",
+    "artist": "Vanitas Lacrimosa",
+    "sortKey": "イノセントバイブル",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=DQ1dqP1IoiD11QOPiI0Q8PqO0Qddo6q6&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 10
+      }
+    ]
+  },
+  {
+    "id": "ddr-06f4b0cb3b351123",
+    "title": "イマココ！この瞬間",
+    "artist": "日向美ビタースイーツ♪",
+    "sortKey": "イマココ！この瞬間",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=d01QdIl6i69DqIbbQQd6IPOiQOObPdIi&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-c948b9d4fe9b2c65",
+    "title": "色は匂へど散りぬるを",
+    "artist": "幽閉サテライト feat. senya",
+    "sortKey": "色は匂へど散りぬるを",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=16IqQ680IioldO69QD61liQod0DQ8boQ&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": "ddr-96cd4c76f866a6a8",
+    "title": "ヴァンパイア",
+    "artist": "DECO*27",
+    "sortKey": "ヴァンパイア",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=Dl09QdQ19IoQl6D81qdlPPIdolP1lDi0&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      },
+      {
+        "difficulty": "challenge",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-5971ac18cb02c78f",
+    "title": "↑↑↓↓←→←→BA",
+    "artist": "meiyo",
+    "sortKey": "↑↑↓↓←→←→BA",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=8ooI09QP161IqI00IdPOD1QdDd8oDod9&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-b4ecd2bfaff01db7",
+    "title": "ウサテイ",
+    "artist": "ビートまりお(COOL&CREATE)",
+    "sortKey": "ウサテイ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=9oIO98IPOiq1idiIIbOOqdDQIOdQPPd6&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      },
+      {
+        "difficulty": "challenge",
+        "level": 17
+      }
+    ]
+  },
+  {
+    "id": "ddr-26c8fd2fd1598f63",
+    "title": "ウソツキ横丁は雨模様",
+    "artist": "夜叉姫神楽",
+    "sortKey": "ウソツキ横丁は雨模様",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=q8iPi1DP6Do6D110OQiQDdPq06q80Qb0&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": "ddr-f1c9f50c348572d7",
+    "title": "梅雪夜",
+    "artist": "Qrispy Joybox feat. mao",
+    "sortKey": "梅雪夜",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=bi9OolI1P9oI8dDPlbQiq01Dl080PQ61&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-5e47be51d25eb371",
+    "title": "エイリアンエイリアン",
+    "artist": "ナユタン星人",
+    "sortKey": "エイリアンエイリアン",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=bd8oD0iqDQ8Qobd1oIqi8981QbD6I6Iq&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-c12c60ff1b0eb004",
+    "title": "エキサイティング！！も・ちゃ・ちゃ☆",
+    "artist": "日向美ビタースイーツ♪",
+    "sortKey": "エキサイティング！！も・ちゃ・ちゃ☆",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=80PdqQ0iiOQb9i91lIliodiO9PI8O609&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-5a12867eded0d5fc",
+    "title": "エクスプロウル",
+    "artist": "晴いちばん",
+    "sortKey": "エクスプロウル",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=0Od1iPb8QO8oDd9db9iq6iOP8DQ08I01&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-23324f620ee5f9d1",
+    "title": "エンドルフィン",
+    "artist": "U1 overground",
+    "sortKey": "エンドルフィン",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=oQolO9oOO01ll0I8969i8O1IQliloDqP&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-2ff81b8a83fb57ef",
+    "title": "オーバーライド",
+    "artist": "吉田夜世 feat.重音テト",
+    "sortKey": "オーバーライド",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=Q96ld98IPIld98Iq18bqblldOoP91d69&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 16
+      }
+    ]
+  },
+  {
+    "id": "ddr-177bd2a27512c06c",
+    "title": "おーまい！らぶりー！すうぃーてぃ！だーりん！",
+    "artist": "BEMANI Sound Team \"PON\" feat.NU-KO",
+    "sortKey": "おーまい！らぶりー！すうぃーてぃ！だーりん！",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=lqI8DD9Plq6IO8P8P6Pl8Di98DlI9oP8&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-94b4f6bdaafc2df8",
+    "title": "お米の美味しい炊き方、そしてお米を食べることによるその効果。",
+    "artist": "大日本鉄倶楽部【あさき＆９６】",
+    "sortKey": "お米の美味しい炊き方、そしてお米を食べることによるその効果。",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=9I00D9Id61iD6QP8i8Dd6698PoQ9bdi9&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 16
+      }
+    ]
+  },
+  {
+    "id": "ddr-e8f13915f3f8cf69",
+    "title": "御千手メディテーション",
+    "artist": "昇天家族",
+    "sortKey": "御千手メディテーション",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=ilD80b8QQl9Qo0PP0lQ00b8bO9Oqoobo&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-9cefb547483ec29d",
+    "title": "御伽噺に幕切れを",
+    "artist": "夜叉姫神楽",
+    "sortKey": "御伽噺に幕切れを",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=I606oqOODOdQoP0IQOdP6b0DPdb86ddO&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-588e1e083f44fc8f",
+    "title": "乙女繚乱 舞い咲き誇れ",
+    "artist": "日向美ビタースイーツ♪",
+    "sortKey": "乙女繚乱 舞い咲き誇れ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=i91q8l0bbi8qll000ob6qDiQP891iiql&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-543ca75ecab42386",
+    "title": "踊れ！！バーチャルアニマル！！",
+    "artist": "nc feat. TOCORO十",
+    "sortKey": "踊れ！！バーチャルアニマル！！",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=8IoP10odbqPdPPbIq01OID99o98DIoQl&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "id": "ddr-4f358c170898107a",
+    "title": "おねがいダーリン",
+    "artist": "松下",
+    "sortKey": "おねがいダーリン",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=qdQoQli1d8DP0Obb919I6P1Odilib1Dd&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": "ddr-9daf2a288bd62306",
+    "title": "おひさし中華街！",
+    "artist": "諸星なな feat.加藤はるか",
+    "sortKey": "おひさし中華街！",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=9oP18iDQ9P96bdooq0boQDPQqiiIqOql&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      }
+    ]
+  },
+  {
+    "id": "ddr-1a220e64b377030d",
+    "title": "朧",
+    "artist": "HHH×MM×ST",
+    "sortKey": "朧",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=I96dOqqqQIi9oiqbqDPbQ8I8PQbqOb1o&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 11
+      },
+      {
+        "difficulty": "challenge",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-7e7e4b747e15e427",
+    "title": "朧 (dj TAKA Remix)",
+    "artist": "HHH×MM×ST",
+    "sortKey": "朧 (dj TAKA Remix)",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=oPP1Pdl6Qdlb8oq10PP1doDibdbbl9bl&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      },
+      {
+        "difficulty": "challenge",
+        "level": 16
+      }
+    ]
+  },
+  {
+    "id": "ddr-a6f858b70d0b3c46",
+    "title": "音楽 (STARDOM Remix)",
+    "artist": "cosMo＠暴走P",
+    "sortKey": "音楽 (STARDOM Remix)",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=bdP0IOiPiQ8OlIbD1QQO8O6dPQqqb1Qb&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      },
+      {
+        "difficulty": "challenge",
+        "level": 17
+      }
+    ]
+  },
+  {
+    "id": "ddr-05f3a33492f75669",
+    "title": "女言葉の消失",
+    "artist": "Sota Fujimori",
+    "sortKey": "女言葉の消失",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=0Ib6qIb0iPOoQqqDIl90dP0PI0o9QlDd&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-f5b8c2a184f6002f",
+    "title": "覚悟せよ！エンタンメ～ン ～より身の切り売り自暴自棄版～",
+    "artist": "マキシウキョウ",
+    "sortKey": "覚悟せよ！エンタンメ～ン ～より身の切り売り自暴自棄版～",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=dDqq9QbDDO8l6q8i1l91oQPbQD8Pqi0i&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-8b92fa1d9464cd66",
+    "title": "革命",
+    "artist": "dj TAKA with NAOKI",
+    "sortKey": "革命",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=l9lq19DdiD8qQPoPOlboi1qQii0IQI86&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 12
+      },
+      {
+        "difficulty": "challenge",
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": "ddr-13c975c6dffa0509",
+    "title": "革命(X-Special)",
+    "artist": "dj TAKA with NAOKI",
+    "sortKey": "革命(X-Special)",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=qIqqdd1Odqi1Iiolq9qqPOi0bPPld8Pb&kind=1",
+    "charts": [
+      {
+        "difficulty": "challenge",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-a3697ef40b82656d",
+    "title": "革命パッショネイト",
+    "artist": "日向美ビタースイーツ♪",
+    "sortKey": "革命パッショネイト",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=l1lO999PqIboPQOD86PDQo1ol1iIiiOi&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  },
+  {
+    "id": "ddr-ecff2f61d3629ac0",
+    "title": "カゲロウ",
+    "artist": "Des-ROW・組スペシアルr",
+    "sortKey": "カゲロウ",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=ql1Q8P100IIlbl0Pdi08I8qD900idqQq&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 9
+      }
+    ]
+  },
+  {
+    "id": "ddr-bf5441f0530ebbb3",
+    "title": "カジノファイヤーことみちゃん",
+    "artist": "covered by 一条莉々華(ReGLOSS)",
+    "sortKey": "カジノファイヤーことみちゃん",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=II1199iiDiido80Iq0Q199I1olq0l8i9&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 14
+      }
+    ]
+  },
+  {
+    "id": "ddr-784bf5c62ec170e0",
+    "title": "カタルシスの月",
+    "artist": "日向美ビタースイーツ♪",
+    "sortKey": "カタルシスの月",
+    "jacketUrl": "https://p.eagate.573.jp/game/ddr/ddrworld/images/binary_jk.html?img=6DibIbiiDlq1OiI6QOlPlO1loQOiDb1q&kind=1",
+    "charts": [
+      {
+        "difficulty": "expert",
+        "level": 13
+      }
+    ]
+  }
+]
