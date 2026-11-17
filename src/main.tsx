@@ -10,11 +10,85 @@ const optionLabels:Record<Option,string>={'-':'－',normal:'正',mirror:'鏡',ri
 const optionChoices:Option[]=['-','normal','mirror','right','left','random'];
 const empty=():Setting=>({option:'-',judgeMs:null,memo:''});
 const chartKey=(songId:string,diff:Diff)=>`${songId}:sp:${diff}`;
+
+
+const normalizeSortText = (text: string): string => {
+  return text
+    .trim()
+    .normalize('NFKD')
+    .replace(/Æ/gi, 'AE')
+    .replace(/Œ/gi, 'OE')
+    .replace(/ß/g, 'ss')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase();
+};
+
+const getInitial = (song: Song): string => {
+  const text = normalizeSortText(song.sortKey || song.title);
+  const first = text.charAt(0);
+
+  if (/^[A-Z]$/.test(first)) return first;
+  if (/^[0-9]$/.test(first)) return '0-9';
+
+  return 'あ+記号';
+};
+
+
 function validateSongs(value:unknown):Song[]{if(!Array.isArray(value))throw Error('JSON配列ではありません');const ids=new Set<string>();return value.map((s:any)=>{if(!s||typeof s.id!=='string'||!s.id||typeof s.title!=='string'||!Array.isArray(s.charts))throw Error('楽曲データ形式が不正です');if(ids.has(s.id))throw Error('楽曲IDが重複しています: '+s.id);ids.add(s.id);const charts=s.charts.map((c:any)=>{if(!['expert','challenge'].includes(c.difficulty)||!Number.isInteger(c.level)||c.level<1||c.level>19)throw Error('譜面データが不正です: '+s.id);return{difficulty:c.difficulty as Diff,level:c.level as number}});if(new Set(charts.map((c:{difficulty:Diff})=>c.difficulty)).size!==charts.length)throw Error('同一難易度が重複しています');return{id:s.id,title:s.title,sortKey:typeof s.sortKey==='string'?s.sortKey:s.title,jacketUrl:typeof s.jacketUrl==='string'&&/^https:\/\//.test(s.jacketUrl)?s.jacketUrl:null,charts}})}
 function App(){const[level,setLevel]=useState(16);const[filter,setFilter]=useState<'all'|Diff>('all');const[songs,setSongs]=useState<Song[]>([]);const[settings,setSettings]=useState<RecordMap>(()=>{try{return JSON.parse(localStorage.getItem('ddr-settings-v1')||'{}')}catch{return{}}});const[selected,setSelected]=useState<string|null>(null);const[showMemo,setShowMemo]=useState(false);const[search,setSearch]=useState('');const[showSearch,setShowSearch]=useState(false);const[message,setMessage]=useState('');const fileRef=useRef<HTMLInputElement>(null);const dataRef=useRef<HTMLInputElement>(null);
 useEffect(()=>{fetch(`${import.meta.env.BASE_URL}data/songs.json`).then(r=>{if(!r.ok)throw Error('読み込み失敗');return r.json()}).then(v=>setSongs(validateSongs(v))).catch(e=>setMessage(String(e)))},[]);
 useEffect(()=>{localStorage.setItem('ddr-settings-v1',JSON.stringify(settings))},[settings]);
-const entries=useMemo(()=>songs.flatMap(song=>song.charts.filter(c=>c.level===level&&(filter==='all'||filter===c.difficulty)).map(chart=>({...chart,song,key:chartKey(song.id,chart.difficulty)}))).filter(e=>e.song.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())).sort((a,b)=>(a.song.sortKey||a.song.title).localeCompare(b.song.sortKey||b.song.title,'ja')||a.difficulty.localeCompare(b.difficulty)),[songs,level,filter,search]);
+
+
+const entries = useMemo(() => {
+  const initialOrder = (initial: string): number => {
+    if (initial === '0-9') return 0;
+    if (initial === 'あ+記号') return 27;
+    return initial.charCodeAt(0) - 64;
+  };
+
+  return songs
+    .flatMap(song =>
+      song.charts
+        .filter(c =>
+          c.level === level &&
+          (filter === 'all' || filter === c.difficulty)
+        )
+        .map(chart => ({
+          ...chart,
+          song,
+          key: chartKey(song.id, chart.difficulty)
+        }))
+    )
+    .filter(e =>
+      e.song.title
+        .toLocaleLowerCase()
+        .includes(search.toLocaleLowerCase())
+    )
+    .sort((a, b) => {
+      const aInitial = getInitial(a.song);
+      const bInitial = getInitial(b.song);
+
+      const groupDiff =
+        initialOrder(aInitial) - initialOrder(bInitial);
+
+      if (groupDiff !== 0) return groupDiff;
+
+      const aTitle = normalizeSortText(
+        a.song.sortKey || a.song.title
+      );
+      const bTitle = normalizeSortText(
+        b.song.sortKey || b.song.title
+      );
+
+      return (
+        aTitle.localeCompare(bTitle, 'en') ||
+        a.difficulty.localeCompare(b.difficulty)
+      );
+    });
+}, [songs, level, filter, search]);
+
+
 const [judgeDraft, setJudgeDraft] = useState('');
 const current=entries.find(e=>e.key===selected);const currentSetting=current?(settings[current.key]||empty()):empty();
 const update=(part:Partial<Setting>)=>{if(!selected)return;setSettings(p=>({...p,[selected]:{...(p[selected]||empty()),...part}}))};
@@ -88,5 +162,97 @@ return <><header><div className="top"><span className="brand">DDR <b>MEMO</b></s
 >
   決定
 </button>
-<button className={'memo-btn '+(showMemo?'active':'')} title="メモ" disabled={!current} onClick={()=>setShowMemo(true)}><NotebookPen size={18}/></button></div>{showSearch&&<input className="search" autoFocus placeholder="曲名で絞り込み" value={search} onChange={e=>setSearch(e.target.value)}/>}</header><main><div className="grid">{entries.map((e,i)=>{const s=settings[e.key]||empty();return <button key={e.key} className={'tile '+(selected===e.key?'selected':'')} style={{background:`linear-gradient(${(i*29)%360}deg,hsl(${(i*31)%360} 35% 30%,#171a26)`}} onClick={()=>{setSelected(e.key);setShowMemo(false)}} aria-label={`${e.song.title} ${e.difficulty} ${optionLabels[s.option]} ${s.judgeMs??'未設定'}`}><span className="badge">{optionLabels[s.option]}/{s.judgeMs===null?'－':s.judgeMs>0?'+'+s.judgeMs:s.judgeMs}</span>{e.song.jacketUrl?<img loading={i<20?'eager':'lazy'} src={e.song.jacketUrl} alt="" onError={ev=>{ev.currentTarget.style.display='none'}}/>:<span className="placeholder">{e.song.title}</span>}<span className="diff-badge">{e.difficulty==='expert'?'EX':'CH'}</span></button>})}</div>{entries.length===0&&<div className="empty">該当する譜面がありません。<br/>レベルまたは楽曲データを確認してください。</div>}</main><input ref={dataRef} hidden type="file" accept=".json,application/json" onChange={e=>{void importSongs(e.target.files?.[0]);e.target.value=''}}/><input ref={fileRef} hidden type="file" accept=".json,application/json" onChange={e=>{void importSettings(e.target.files?.[0]);e.target.value=''}}/><footer><button onClick={()=>fileRef.current?.click()}>設定JSONを復元</button><span>個人用・非公式ツール</span></footer>{message&&<div className="toast" role="status" onClick={()=>setMessage('')}>{message} ×</div>}{showMemo&&current&&<div className="modal-backdrop" onClick={()=>setShowMemo(false)}><section className="modal" onClick={e=>e.stopPropagation()}><div className="modal-title"><strong>{current.song.title} / {current.difficulty==='expert'?'EX':'CH'}</strong><button className="icon" onClick={()=>setShowMemo(false)}><X size={20}/></button></div><textarea autoFocus rows={6} placeholder="配置・踏み方などのメモ" value={currentSetting.memo} onChange={e=>update({memo:e.target.value})}/><small>入力内容は自動保存されます</small><button className="close" onClick={()=>setShowMemo(false)}>閉じる</button></section></div>}</>}
+<button className={'memo-btn '+(showMemo?'active':'')} title="メモ" disabled={!current} onClick={()=>setShowMemo(true)}><NotebookPen size={18}/></button></div>{showSearch&&<input className="search" autoFocus placeholder="曲名で絞り込み" value={search} onChange={e=>setSearch(e.target.value)}/>}</header>
+
+
+
+<main>
+  <div className="grid">
+    {entries.map((e, i) => {
+      const s = settings[e.key] || empty();
+      const initial = getInitial(e.song);
+
+      const previousInitial =
+        i > 0 ? getInitial(entries[i - 1].song) : null;
+
+      const showHeading = initial !== previousInitial;
+
+      return (
+        <React.Fragment key={e.key}>
+
+{showHeading && (
+  <div
+    className={
+      'initial-tile' +
+      (initial === 'あ+記号' ? ' is-other' : '')
+    }
+    aria-label={`${initial} の曲`}
+  >
+    <span>{initial}</span>
+  </div>
+)}
+
+
+          <button
+            className={
+              'tile ' + (selected === e.key ? 'selected' : '')
+            }
+            style={{
+              background: `linear-gradient(
+                ${(i * 29) % 360}deg,
+                hsl(${(i * 31) % 360} 35% 30%, #171a26)
+              )`
+            }}
+            onClick={() => {
+              setSelected(e.key);
+              setShowMemo(false);
+            }}
+            aria-label={`${e.song.title} ${e.difficulty}`}
+          >
+            <span className="badge">
+              {optionLabels[s.option]}/
+              {s.judgeMs === null
+                ? '－'
+                : s.judgeMs > 0
+                  ? '+' + s.judgeMs
+                  : s.judgeMs}
+            </span>
+
+            {e.song.jacketUrl ? (
+              <img
+                loading={i < 20 ? 'eager' : 'lazy'}
+                src={e.song.jacketUrl}
+                alt=""
+                onError={ev => {
+                  ev.currentTarget.style.display = 'none';
+                }}
+              />
+            ) : (
+              <span className="placeholder">
+                {e.song.title}
+              </span>
+            )}
+
+            <span
+              className={
+                'diff-badge ' +
+                (e.difficulty === 'expert'
+                  ? 'diff-ex'
+                  : 'diff-ch')
+              }
+            >
+              {e.difficulty === 'expert' ? 'EX' : 'CH'}
+            </span>
+
+            <span className="song-title-overlay">
+              <span>{e.song.title}</span>
+            </span>
+          </button>
+        </React.Fragment>
+      );
+    })}
+  </div>
+
+
+{entries.length===0&&<div className="empty">該当する譜面がありません。<br/>レベルまたは楽曲データを確認してください。</div>}</main><input ref={dataRef} hidden type="file" accept=".json,application/json" onChange={e=>{void importSongs(e.target.files?.[0]);e.target.value=''}}/><input ref={fileRef} hidden type="file" accept=".json,application/json" onChange={e=>{void importSettings(e.target.files?.[0]);e.target.value=''}}/><footer><button onClick={()=>fileRef.current?.click()}>設定JSONを復元</button><span>個人用・非公式ツール</span></footer>{message&&<div className="toast" role="status" onClick={()=>setMessage('')}>{message} ×</div>}{showMemo&&current&&<div className="modal-backdrop" onClick={()=>setShowMemo(false)}><section className="modal" onClick={e=>e.stopPropagation()}><div className="modal-title"><strong>{current.song.title} / {current.difficulty==='expert'?'EX':'CH'}</strong><button className="icon" onClick={()=>setShowMemo(false)}><X size={20}/></button></div><textarea autoFocus rows={6} placeholder="配置・踏み方などのメモ" value={currentSetting.memo} onChange={e=>update({memo:e.target.value})}/><small>入力内容は自動保存されます</small><button className="close" onClick={()=>setShowMemo(false)}>閉じる</button></section></div>}</>}
 createRoot(document.getElementById('root')!).render(<App/>);
