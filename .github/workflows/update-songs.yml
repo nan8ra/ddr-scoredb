@@ -1,0 +1,112 @@
+
+name: Update DDR songs
+
+on:
+  schedule:
+    # JST 07:05 = UTC 22:05 (前日)
+    - cron: '5 22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ddr-songs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Scrape DDR WORLD
+        run: |
+          python scrape_ddr.py \
+            --pages 100 \
+            --delay 1.5
+
+      - name: Validate and preserve existing songs
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          import subprocess
+
+          path = Path("public/data/songs.json")
+
+          new_songs = json.loads(path.read_text(encoding="utf-8"))
+          old_songs = json.loads(
+              subprocess.check_output(
+                  ["git", "show", "HEAD:public/data/songs.json"],
+                  text=True,
+                  encoding="utf-8",
+              )
+          )
+
+          if len(new_songs) < 1000:
+              raise SystemExit("取得件数が少なすぎます。更新を中止します。")
+
+          old_by_id = {song["id"]: song for song in old_songs}
+          new_by_id = {song["id"]: song for song in new_songs}
+
+          if len(new_by_id) != len(new_songs):
+              raise SystemExit("重複IDがあります。更新を中止します。")
+
+          missing_ids = set(old_by_id) - set(new_by_id)
+
+          # 大量に取得できなくなった場合は公開しない
+          if len(missing_ids) > max(10, len(old_songs) // 100):
+              raise SystemExit(
+                  f"既存曲が{len(missing_ids)}件見つかりません。"
+                  "サイト変更の可能性があるため更新を中止します。"
+              )
+
+          # 一時的に取得できなかった既存曲も保持
+          for song in old_songs:
+              if song["id"] not in new_by_id:
+                  new_songs.append(song)
+
+          # 既存曲の並びを維持し、新曲を末尾へ
+          merged = {song["id"]: song for song in new_songs}
+          result = [merged.pop(song["id"]) for song in old_songs]
+          result.extend(merged.values())
+
+          path.write_text(
+              json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          print(f"旧データ: {len(old_songs)}曲")
+          print(f"新データ: {len(result)}曲")
+          print(f"追加: {len(set(new_by_id) - set(old_by_id))}曲")
+          print(f"既存曲の取得漏れ: {len(missing_ids)}曲")
+
+      - name: Commit and push if changed
+        shell: bash
+        run: |
+          git add public/data/songs.json
+
+          if git diff --cached --quiet; then
+            echo "楽曲データに変更なし"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git commit -m "chore: update DDR song data"
+          git push

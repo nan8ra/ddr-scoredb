@@ -99,7 +99,7 @@ def parse_row(row, page_url):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--pages', type=int, default=27, help='ページ数 (既定: 27)')
+    p.add_argument('--pages', type=int, default=100, help='最大取得ページ数 (既定: 100)')
     p.add_argument('--output', default='public/data/songs.json')
     p.add_argument('--debug-dir', default='scrape-debug')
     p.add_argument('--delay', type=float, default=1.5)
@@ -131,12 +131,17 @@ def main():
                 except Exception as exc:
                     (debug / f'problem-{offset:02}-{i:02}.html').write_text(str(row), encoding='utf-8')
                     raise ValueError(f'ページ{offset + 1} 曲{i}: {exc}') from exc
+            # 50曲未満なら最終ページと判断
+            if len(rows) < 50:
+                print(f'最終ページを検出: {offset + 1}ページ目')
+                break
+
             if offset + 1 < args.pages:
                 time.sleep(args.delay)
         ids = [song['id'] for song in all_songs]
         if len(ids) != len(set(ids)):
             raise ValueError('重複IDがあります。元データを確認してください')
-        if args.pages == 27 and len(all_songs) < 1000:
+        if len(all_songs) < 1000:
             raise ValueError(f'全曲取得として少なすぎます: {len(all_songs)}曲')
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
